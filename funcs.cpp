@@ -19,7 +19,5 @@ int lcm(int a, int b) {
    // NOTE:  It's important to divide before multiplying here, otherwise
    //        the product might overflow
    return a * (b / gcd(a, b));
-    
-  return b;
 }
 
