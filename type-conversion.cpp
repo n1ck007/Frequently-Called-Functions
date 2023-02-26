@@ -1,4 +1,10 @@
 // Convert char to string 
-// use the string constructor method
+// using the string constructor String(length, char)
 char myChar = 'a';
-string myString(1, myChar);
+string myStr(1, myChar);
+
+// Convert String to int
+// using stoi(string, starting position, number base) 
+string myStr = "743";
+int myInt = stoi(myStr, 0, 10);
+
