@@ -1,5 +1,5 @@
 #include<iostream>
-#inlcude<fstream>
+#include<fstream>
 #include<string>
 
 int main() {
