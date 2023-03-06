@@ -4,15 +4,15 @@
 
 int main() {
   fstream file;
-  string filename;
+  string fileName;
   string line;
   
   cout << "Enter the file name: ";
-	getline(cin, filename);
+	getline(cin, fileName);
   
   
   // read from file
-  file.open(filename, ios::in);
+  file.open(fileName, ios::in);
   if (file.is_open()) {
 		while (getline(file, line)) {
 			cout << line << endl;
