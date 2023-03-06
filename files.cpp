@@ -4,11 +4,11 @@
 
 int main() {
   fstream file;
-  string fileName;
+  string filename;
   string line;
   
   cout << "Enter the file name: ";
-	getline(cin, fileName);
+	getline(cin, filename);
   
   
   // read from file
