@@ -7,6 +7,18 @@ vector<vector<int>> mat = {
         { 13, 12, 11, 10, 9 }
     };
 
+// how to populate 
+for (int i = 0; i < matSize; i++) {
+        vector<int> temp;
+        for (int j = 0; i < matSize; j++) {
+                temp.push_back(i);
+        }
+        mat.push_back(temp);
+}
+
+
+
+
 
 // Static Matrix
 int mat[3][4] = {
