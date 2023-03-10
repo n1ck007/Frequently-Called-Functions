@@ -92,6 +92,8 @@
 
 
 // prints a incrementing percentage to the console
+// requires #include <windows.h> to use the sleep function
+// which delays console operations by number of milliseconds
 for (int i = 0; i <= 100; i++) {
 
 	cout << i << "%\033[F";
