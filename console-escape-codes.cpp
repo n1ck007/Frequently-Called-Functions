@@ -91,3 +91,12 @@
 	}
 
 
+// prints a incrementing percentage to the console
+for (int i = 0; i <= 100; i++) {
+
+	cout << i << "%\033[F";
+	Sleep(50);
+}
+cout << endl;
+
+
