@@ -2,6 +2,8 @@ bool getYesNo() {
 	
 	// get the users response to a yes or no question
 	// the question must be asked before this function is called
+	// also be sure to clear the istream by using cin.ignore() just before you call 
+	// this function. since getline() is use there may still be a '\n' left over from somthing else
 
 	string str;
 	getline(cin, str);
