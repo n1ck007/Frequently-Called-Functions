@@ -28,6 +28,14 @@ void printMat(vector<vector<int>> mat) {
 }
 
 
+// is a coordinate within range
+bool isValid(vector<vector<int>> mat, int x, int y) {
+	return 0 <= x && x < mat.size()	// if x is within range
+		&& 0 <= y && y < mat.size();// if y is within range
+}
+
+
+
 
 // Static Matrix
 int mat[3][4] = {
