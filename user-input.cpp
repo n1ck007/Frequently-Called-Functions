@@ -23,10 +23,10 @@ bool getYesNo() {
 		}
 
 		// check response
-		if (str == "y" || str == "yes" || "t" || "true" || "1") {
+		if (str == "y" || str == "yes" || "t" || "true") {
 			return true;
 		}
-		else if (str == "n" || str == "no" || "f" || "false" || "0") {
+		else if (str == "n" || str == "no" || "f" || "false") {
 			return false;
 		}
 	}
