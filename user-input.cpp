@@ -1,6 +1,11 @@
 bool getYesNo() {
 	// get the users response to a yes or no question
 	// the question must be asked before this function is called
+	
+	// if text has been input prior calling this function we must ignore it 
+	// or getline() will take it and the user will not have the chance to responsed
+	cin.ignore();
+	
 	string str;
 	getline(cin, str);
 	
