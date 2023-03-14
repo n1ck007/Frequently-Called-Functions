@@ -8,16 +8,14 @@ bool getYesNo() {
 		return getYesNo();
 	}
 
-	// erase whitespace
+	// erase whitespace or make lowercase
 	for (size_t i = str.size() - 1; i > 0; i--) {
 		if (str.at(i) == ' ') {
 			str.erase(i, 1);
 		}
-	}
-
-	// make lowercase
-	for (size_t i = 0; i < str.size(); i++) {
-		str.at(i) = tolower(str.at(i));
+		else {
+			str.at(i) = tolower(str.at(i));
+		}
 	}
 
 
