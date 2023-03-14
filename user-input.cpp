@@ -1,6 +1,6 @@
-// get the users response to a yes or no question
-// the question must be asked before this function is called
 bool getYesNo() {
+	// get the users response to a yes or no question
+	// the question must be asked before this function is called
 	string str;
 	getline(cin, str);
 	
