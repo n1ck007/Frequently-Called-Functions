@@ -27,6 +27,30 @@ void printMat(vector<vector<int>> mat) {
 	}
 }
 
+// print matrix with color
+void colorPrintMat(vector<vector<int>> mat, bool useColor) {
+	for (int i = 0; i < mat.size(); i++) {
+		for (int j = 0; j < mat.size(); j++) {
+			if (useColor) {
+				if (mat[i][j] % 7 == 0 && mat[i][j] != 0) {
+					// 0 is coded to black so there would be no color. Use 10 and 0 for grey instead.
+					cout << "\033[100m" << endl;
+				}
+				else {
+					// set color code. Use mod 7 because the color code shouldn't exceed 6.
+					cout << "\033[4" << to_string(mat[i][j] % 7) << "m";
+				}
+			}
+
+			// output matrix contents
+			cout << mat[i][j] << " ";
+
+		}
+		cout << "\033[0m" << endl;
+	}
+	cout << endl;
+}
+
 
 // is a coordinate within range
 bool isValid(vector<vector<int>> mat, int x, int y) {
