@@ -7,16 +7,25 @@ vector<vector<int>> mat = {
         { 13, 12, 11, 10, 9 }
     };
 
-// how to populate 
+// Populate matrix
 for (int i = 0; i < matSize; i++) {
         vector<int> temp;
         for (int j = 0; i < matSize; j++) {
-                temp.push_back(i);
+                temp.push_back(i+j);
         }
         mat.push_back(temp);
 }
 
 
+// print matrix
+void printMat(vector<vector<int>> mat) {
+	for (size_t i = 0; i < mat.size(); i++) {
+		for (size_t j = 0; j < mat.size(); j++) {
+			cout << mat[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
 
 
 
