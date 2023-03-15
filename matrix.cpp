@@ -22,7 +22,7 @@ void printMat(vector<vector<int>> mat) {
 	for (size_t i = 0; i < mat.size(); i++) {
 		for (size_t j = 0; j < mat.size(); j++) {
 			// if one digit, put a space after
-			if (mat[i][j] > 9) {
+			if (mat[i][j] < 10) {
 				cout << mat[i][j] << " ";
 			}
 			else {
@@ -50,7 +50,7 @@ void colorPrintMat(vector<vector<int>> mat, bool useColor) {
 
 			// output matrix contents
 			// if one digit, put a space after
-			if (mat[i][j] > 9) {
+			if (mat[i][j] < 10) {
 				cout << mat[i][j] << " ";
 			}
 			else {
