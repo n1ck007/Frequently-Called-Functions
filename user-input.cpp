@@ -1,3 +1,7 @@
+// pause the console until the user pushes a key
+system("pause");
+
+
 bool getYesNo() {
 	
 	// get the users response to a yes or no question
