@@ -21,7 +21,13 @@ for (int i = 0; i < matSize; i++) {
 void printMat(vector<vector<int>> mat) {
 	for (size_t i = 0; i < mat.size(); i++) {
 		for (size_t j = 0; j < mat.size(); j++) {
-			cout << mat[i][j] << " ";
+			// if one digit, put a space after
+			if (mat[i][j] > 9) {
+				cout << mat[i][j] << " ";
+			}
+			else {
+				cout << mat[i][j];
+			}
 		}
 		cout << endl;
 	}
@@ -43,7 +49,13 @@ void colorPrintMat(vector<vector<int>> mat, bool useColor) {
 			}
 
 			// output matrix contents
-			cout << mat[i][j] << " ";
+			// if one digit, put a space after
+			if (mat[i][j] > 9) {
+				cout << mat[i][j] << " ";
+			}
+			else {
+				cout << mat[i][j];
+			}
 
 		}
 		cout << "\033[0m" << endl;
