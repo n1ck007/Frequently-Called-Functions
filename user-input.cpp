@@ -96,10 +96,12 @@ void runMenu() {
 			}
 			else if (select == "q" || select == "quit") {
 				cout << "Are you sure you want to quit (Y/N)? " << endl;
-				bool asw = getYesNo();
-				if (asw) {
+				bool ans = getYesNo();
+				if (ans) {
 					return;
 				}
+				// if you don't change select, it will remain as 'q'.
+				select = "";
 				cout << endl;
 			}
 			else {
