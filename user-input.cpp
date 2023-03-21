@@ -35,7 +35,7 @@ bool getYesNo() {
 		}
 	}
 
-	cout << "Input cannot be understood. Please try again: ";
+	cout << "Input cannot be understood, please try again: ";
 	return getYesNo();
 }
 
