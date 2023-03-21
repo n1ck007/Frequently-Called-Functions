@@ -17,3 +17,13 @@ string eraseWhiteSpace(string str) {
 // make lowercase
 for (size_t i = 0; i < str.size(); i++) {
 		str.at(i) = tolower(str.at(i));
+
+// erase whitespace and make lowercase
+for (size_t i = str.size() - 1; i > 0; i--) {
+	if (str.at(i) == ' ') {
+		//str.erase(i, 1);
+	}
+	else {
+		str.at(i) = tolower(str.at(i));
+	}
+}
