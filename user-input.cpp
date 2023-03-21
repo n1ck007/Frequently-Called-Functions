@@ -40,4 +40,74 @@ bool getYesNo() {
 }
 
 
+// print a list of options
+void printMenu() {
+	cout << "1.  option1" << endl;
+	cout << "2.  option2" << endl;
+	cout << "3.  option3" << endl;
+	cout << "4.  option4" << endl;
+	cout << "5.  option5" << endl;
+	cout << "6.  option6" << endl;
+	cout << "7.  option7" << endl;
+	cout << "8.  option8" << endl;
+	cout << "9.  option9" << endl;
+	cout << "10. option10" << endl;
+	cout << "11. option11" << endl;
+	cout << "q.  quit" << endl;
+	cout << endl;
+}
 
+
+// execute the menu until user quit's
+void runMenu() {
+	string select;
+
+	do {
+		printMenu();
+		cout << "Select an option: ";
+
+		getline(cin, select);
+
+		// proccess input
+		if (select.size() != 0) {
+			
+			// erase whitespace and make lowercase
+			for (size_t i = select.size() - 1; i > 0; i--) {
+				if (select.at(i) == ' ') {
+					select.erase(i, 1);
+				}
+				else {
+					select.at(i) = tolower(select.at(i));
+				}
+			}// erase if
+
+			// option branching
+			if (select == "1" || select == "op1") {
+				cout << "call option1()" << endl;
+				cout << endl;
+			}
+			else if (select == "2" || select == "op2") {
+				cout << "call option2()" << endl;
+				cout << endl;
+			}
+			else if (select == "3" || select == "op3") {
+				cout << "call option3()" << endl;
+				cout << endl;
+			}
+			else if (select == "q" || select == "quit") {
+				cout << "Are you sure you want to quit (Y/N)? " << endl;
+				bool asw = getYesNo();
+				if (asw) {
+					return;
+				}
+				cout << endl;
+			}
+			else {
+				cout << "Input cannot be understood. Please try again.";
+				cout << endl;
+			}
+		}// != 0 if
+
+	} while (select != "q" && select != "quit");
+	return;
+}
