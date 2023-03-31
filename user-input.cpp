@@ -11,17 +11,16 @@ bool getYesNo() {
 	// without this check an out_of_range exception will be thrown as a result of the string indexing
 	if (str.size() != 0) {
 
-		// erase whitespace
+		// erase whitespace or make lowercase
 		for (size_t i = str.size() - 1; i > 0; i--) {
 			if (str.at(i) == ' ') {
 				str.erase(i, 1);
+			} 
+			else {
+				str.at(i) = tolower(str.at(i));
 			}
 		}
-
-		// make lowercase
-		for (size_t i = 0; i < str.size(); i++) {
-			str.at(i) = tolower(str.at(i));
-		}
+		str.at(0) = tolower(str.at(0)); // loop stop if !(i > 0)
 
 		// check response
 		if (str == "y" || str == "yes" || str == "t" || str == "true" || str == "1") {
