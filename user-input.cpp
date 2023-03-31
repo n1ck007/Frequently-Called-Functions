@@ -14,7 +14,7 @@ bool getYesNo() {
 		// erase whitespace or make lowercase
 		for (size_t i = str.size() - 1; i > 0; i--) {
 			if (str.at(i) == ' ') {
-				//str.erase(i, 1);
+				str.erase(i, 1);
 			}
 			else {
 				str.at(i) = tolower(str.at(i));
