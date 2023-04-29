@@ -19,17 +19,17 @@ void selectionSort(vector<int> &vec) {
 	int min;
 	for (i = 0; i < vec.size() - 1; i++) {
 		min = i;
-		// fin the minimum value in the unsorted array
+		// find the minimum value in the unsorted array
 		for (j = i+1; j < vec.size(); j++) {
 			if ( (vec.at(j)) <= (vec.at(min)) ) {
 				min = j;
 			}
-			if (min != i) {
-				// swap values at indices i and min
-				int temp = vec.at(min);
-				vec.at(min) = vec.at(i);
-				vec.at(i) = temp;
-			}
+		}
+		if (min != i) {
+			// swap values at indices i and min
+			int temp = vec.at(min);
+			vec.at(min) = vec.at(i);
+			vec.at(i) = temp;
 		}
 	}
 }
