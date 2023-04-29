@@ -12,21 +12,24 @@ int isSorted(int arr[], int n){
     return arr[n-1] >= arr[n-2] && isSorted(arr, n - 1);
 }
 
-// Bubble Sort - Iterative
-void bubbleSort(int arr[], int n) {
-  //https://www.techiedelight.com/bubble-sort-iterative-recursive/
-  // this loop controls the number of passes
-  for (int k = 0; k < n - 1; k++) {
-    // after x pass we know that the last x items will be sorted
-    for (int i = 0; i < n - 1 - k; i++) {
-      // if wrong order
-      if (arr[i] > arr[i + 1]) {
-        // swap
-        int temp = arr[i];
-        arr[i] = arr[i + 1];
-        arr[i + 1] = temp;
-      }
-    }
-  }
+// Selection Sort - Iterative
+void selectionSort(vector<int> &vec) {
+	int i;
+	int j;
+	int min;
+	for (i = 0; i < vec.size() - 1; i++) {
+		min = i;
+		// fin the minimum value in the unsorted array
+		for (j = i+1; j < vec.size(); j++) {
+			if ( (vec.at(j)) <= (vec.at(min)) ) {
+				min = j;
+			}
+			if (min != i) {
+				// swap values at indices i and min
+				int temp = vec.at(min);
+				vec.at(min) = vec.at(i);
+				vec.at(i) = temp;
+			}
+		}
+	}
 }
-
