@@ -5,8 +5,8 @@ system("pause");
 bool getYesNo() {
 	// the question must be asked before this function is called
 	
-	string str;
-	getline(cin, str);
+	std::string str;
+	getline(std::cin, str);
 
 	// without this check an out_of_range exception will be thrown as a result of the string indexing
 	if (str.size() != 0) {
@@ -31,38 +31,38 @@ bool getYesNo() {
 		}
 	}
 
-	cout << "Input cannot be understood, please try again: ";
+	std::cout << "Input cannot be understood, please try again: ";
 	return getYesNo();
 }
 
 
 // print a list of options
 void printMenu() {
-	cout << "1.  option1" << endl;
-	cout << "2.  option2" << endl;
-	cout << "3.  option3" << endl;
-	cout << "4.  option4" << endl;
-	cout << "5.  option5" << endl;
-	cout << "6.  option6" << endl;
-	cout << "7.  option7" << endl;
-	cout << "8.  option8" << endl;
-	cout << "9.  option9" << endl;
-	cout << "10. option10" << endl;
-	cout << "11. option11" << endl;
-	cout << "q.  quit" << endl;
-	cout << endl;
+	std::cout << "1.  option1" << std::endl;
+	std::cout << "2.  option2" << std::endl;
+	std::cout << "3.  option3" << std::endl;
+	std::cout << "4.  option4" << std::endl;
+	std::cout << "5.  option5" << std::endl;
+	std::cout << "6.  option6" << std::endl;
+	std::cout << "7.  option7" << std::endl;
+	std::cout << "8.  option8" << std::endl;
+	std::cout << "9.  option9" << std::endl;
+	std::cout << "10. option10" << std::endl;
+	std::cout << "11. option11" << std::endl;
+	std::cout << "q.  quit" << std::endl;
+	std::cout << std::endl;
 }
 
 
 // execute the menu until user quit's
 void runMenu() {
-	string select;
+	std::string select;
 
 	do {
 		printMenu();
-		cout << "Select an option: ";
+		std::cout << "Select an option: ";
 
-		getline(cin, select);
+		getline(std::cin, select);
 
 		// proccess input
 		if (select.size() != 0) {
@@ -79,30 +79,30 @@ void runMenu() {
 
 			// option branching
 			if (select == "1" || select == "op1") {
-				cout << "call option1()" << endl;
-				cout << endl;
+				std::cout << "call option1()" << std::endl;
+				std::cout << std::endl;
 			}
 			else if (select == "2" || select == "op2") {
-				cout << "call option2()" << endl;
-				cout << endl;
+				std::cout << "call option2()" << std::endl;
+				std::cout << std::endl;
 			}
 			else if (select == "3" || select == "op3") {
-				cout << "call option3()" << endl;
-				cout << endl;
+				std::cout << "call option3()" << std::endl;
+				std::cout << std::endl;
 			}
 			else if (select == "q" || select == "quit") {
-				cout << "Are you sure you want to quit (Y/N)? " << endl;
+				std::cout << "Are you sure you want to quit (Y/N)? " << std::endl;
 				bool ans = getYesNo();
 				if (ans) {
 					return;
 				}
 				// if you don't change select, it will remain as 'q'.
 				select = "";
-				cout << endl;
+				std::cout << std::endl;
 			}
 			else {
-				cout << "Input cannot be understood. Please try again.";
-				cout << endl;
+				std::cout << "Input cannot be understood. Please try again.";
+				std::cout << std::endl;
 			}
 		}// != 0 if
 
